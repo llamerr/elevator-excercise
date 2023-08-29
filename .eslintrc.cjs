@@ -5,6 +5,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'prettier'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
@@ -14,6 +15,8 @@ module.exports = {
   ],
   rules: {
     'simple-import-sort/imports': 'error',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-duplicate-enum-values': 'warn',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
