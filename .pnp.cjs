@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@fontsource/roboto", "npm:5.0.8"],\
             ["@mui/icons-material", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:5.14.6"],\
             ["@mui/material", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:5.14.6"],\
+            ["@types/node", "npm:20.5.7"],\
             ["@types/react", "npm:18.2.21"],\
             ["@types/react-dom", "npm:18.2.7"],\
             ["@typescript-eslint/eslint-plugin", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:6.5.0"],\
@@ -41,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.48.0"],\
             ["eslint-plugin-react-hooks", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:0.4.3"],\
+            ["eslint-plugin-simple-import-sort", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:10.0.0"],\
             ["husky", "npm:8.0.3"],\
             ["lint-staged", "npm:14.0.1"],\
             ["prettier", "npm:3.0.2"],\
@@ -1179,6 +1181,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/node", [\
+        ["npm:20.5.7", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.5.7-b5e80f1922-fc284c8e16.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:20.5.7"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/parse-json", [\
         ["npm:4.0.0", {\
           "packageLocation": "./.yarn/cache/@types-parse-json-npm-4.0.0-298522afa6-fd6bce2b67.zip/node_modules/@types/parse-json/",\
@@ -2034,6 +2045,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@fontsource/roboto", "npm:5.0.8"],\
             ["@mui/icons-material", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:5.14.6"],\
             ["@mui/material", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:5.14.6"],\
+            ["@types/node", "npm:20.5.7"],\
             ["@types/react", "npm:18.2.21"],\
             ["@types/react-dom", "npm:18.2.7"],\
             ["@typescript-eslint/eslint-plugin", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:6.5.0"],\
@@ -2042,6 +2054,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.48.0"],\
             ["eslint-plugin-react-hooks", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:0.4.3"],\
+            ["eslint-plugin-simple-import-sort", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:10.0.0"],\
             ["husky", "npm:8.0.3"],\
             ["lint-staged", "npm:14.0.1"],\
             ["prettier", "npm:3.0.2"],\
@@ -2236,6 +2249,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/eslint-plugin-react-refresh-virtual-9df7daa3d7/0/cache/eslint-plugin-react-refresh-npm-0.4.3-83ffabe232-0332c950bb.zip/node_modules/eslint-plugin-react-refresh/",\
           "packageDependencies": [\
             ["eslint-plugin-react-refresh", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:0.4.3"],\
+            ["@types/eslint", null],\
+            ["eslint", "npm:8.48.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/eslint",\
+            "eslint"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["eslint-plugin-simple-import-sort", [\
+        ["npm:10.0.0", {\
+          "packageLocation": "./.yarn/cache/eslint-plugin-simple-import-sort-npm-10.0.0-695149a137-23221ff63f.zip/node_modules/eslint-plugin-simple-import-sort/",\
+          "packageDependencies": [\
+            ["eslint-plugin-simple-import-sort", "npm:10.0.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:10.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/eslint-plugin-simple-import-sort-virtual-75b59684dc/0/cache/eslint-plugin-simple-import-sort-npm-10.0.0-695149a137-23221ff63f.zip/node_modules/eslint-plugin-simple-import-sort/",\
+          "packageDependencies": [\
+            ["eslint-plugin-simple-import-sort", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:10.0.0"],\
             ["@types/eslint", null],\
             ["eslint", "npm:8.48.0"]\
           ],\
@@ -4360,7 +4395,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["vite", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:4.4.9"],\
             ["@types/less", null],\
             ["@types/lightningcss", null],\
-            ["@types/node", null],\
+            ["@types/node", "npm:20.5.7"],\
             ["@types/sass", null],\
             ["@types/stylus", null],\
             ["@types/sugarss", null],\
