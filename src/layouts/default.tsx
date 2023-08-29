@@ -1,10 +1,17 @@
-import Header from "../components/Header";
+import { Box } from "@mui/material";
+import { useElementSize } from "usehooks-ts";
 
-const DefaultLayout = ({ children }) => (
-  <>
-    <Header />
-    {children}
-  </>
-);
+import Header from "@/components/Header/Header.tsx";
+
+const DefaultLayout = ({ children }) => {
+  const [headerRef, { width, height }] = useElementSize();
+
+  return (
+    <>
+      <Header ref={headerRef} />
+      <Box sx={{ marginTop: `${height}px` }}>{children}</Box>
+    </>
+  );
+};
 
 export default DefaultLayout;

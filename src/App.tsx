@@ -1,19 +1,27 @@
 import { useState } from "react";
-import "./App.css";
-import DefaultLayout from "./layouts/default.tsx";
-import { Button } from "@mui/material";
+
+import Floor from "@/components/Floor/Floor.tsx";
+import DefaultLayout from "@/layouts/default.tsx";
+
+const MIN_FLOORS = 3;
+const MAX_FLOORS = 100;
+const MIN_ELEVATORS = 1;
+const MAX_ELEVATORS = 10;
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [floors, setFloors] = useState(7);
+  const [elevators, setElevators] = useState(1);
 
   return (
     <>
       <DefaultLayout>
-        <h1>Vite + React</h1>
         <div className="card">
-          <Button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </Button>
+          {[...Array(floors + 1).keys()]
+            .slice(1)
+            .reverse()
+            .map((floor, index) => (
+              <Floor key={index} floor={floor} totalFloors={floors} />
+            ))}
         </div>
       </DefaultLayout>
     </>

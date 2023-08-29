@@ -1,18 +1,23 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
 import AdbIcon from "@mui/icons-material/Adb";
+import {
+  AppBar,
+  Box,
+  Container,
+  FormControlLabel,
+  FormGroup,
+  Switch,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import * as React from "react";
+import { forwardRef } from "react";
 import { useDarkMode } from "usehooks-ts";
-import { FormControlLabel, FormGroup, Switch } from "@mui/material";
 
-function Header() {
+const Header = forwardRef((props, ref) => {
   const { isDarkMode, toggle, enable, disable } = useDarkMode();
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" ref={ref}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -53,5 +58,6 @@ function Header() {
       </Container>
     </AppBar>
   );
-}
+});
+
 export default Header;
