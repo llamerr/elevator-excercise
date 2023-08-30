@@ -3,6 +3,10 @@ import { useEffect, useRef, useState } from "react";
 
 import Elevator from "@/components/Elevator/Elevator.tsx";
 import { TPosition } from "@/components/Elevator/Elevator.types.ts";
+import {
+  DynamicQueue,
+  TProcessCallback,
+} from "@/components/ElevatorController/ElevatorController.ts";
 import Floor from "@/components/Floor/Floor.tsx";
 import { FloorProps } from "@/components/Floor/Floor.types.ts";
 import DefaultLayout from "@/layouts/default.tsx";
@@ -16,6 +20,16 @@ function App() {
   const [floors, setFloors] = useState(7);
   const [elevators, setElevators] = useState(1);
   const lastFloorRef = useRef();
+  const queue = useRef(new DynamicQueue(1, processItem));
+
+  // Example processing callback
+  function processItem(item: string) {
+    console.log(`Processing item: ${item}`);
+    // Simulate processing time (replace with actual processing logic)
+    return new Promise((resolve) => setTimeout(resolve, 1000)).then(() => {
+      console.log(`Processed item: ${item}`);
+    });
+  }
 
   const [elevatorPosition, setElevatorPosition] = useState<TPosition>({
     floor: floors,
@@ -34,6 +48,7 @@ function App() {
 
   const handleCall: FloorProps["onCallElevator"] = ({ floor, position }) => {
     setElevatorPosition({ floor, position });
+    queue.current.enqueue(`floor ${floor}`);
   };
 
   return (
