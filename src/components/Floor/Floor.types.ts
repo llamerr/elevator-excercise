@@ -1,3 +1,5 @@
+import { TPosition } from "@/components/Elevator/Elevator.types.ts";
+
 export enum TFloor {
   BOTTOM_FLOOR = "bottom-floor",
   TOP_FLOOR = "top-floor",
@@ -15,4 +17,5 @@ export type FloorImageProps = {
 export type FloorProps = {
   floor: number;
   totalFloors: number;
+  onCallElevator: (position: TPosition) => void;
 };

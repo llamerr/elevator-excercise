@@ -31,7 +31,7 @@ export const FloorCard = styled(Card)<FloorImageProps>(({ floor }) => ({
   display: "flex",
   flexDirection: "column-reverse",
   alignItems: "flex-start",
-  maxWidth: 345,
+  minWidth: 345,
   position: "relative",
   background: "transparent",
   height:

@@ -38,12 +38,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.2.7"],\
             ["@typescript-eslint/eslint-plugin", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:6.5.0"],\
             ["@typescript-eslint/parser", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:6.5.0"],\
+            ["@uidotdev/usehooks", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:2.2.0"],\
             ["@vitejs/plugin-react-swc", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:3.3.2"],\
             ["eslint", "npm:8.48.0"],\
             ["eslint-config-prettier", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:9.0.0"],\
             ["eslint-plugin-react-hooks", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:0.4.3"],\
             ["eslint-plugin-simple-import-sort", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:10.0.0"],\
+            ["framer-motion", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:10.16.1"],\
             ["husky", "npm:8.0.3"],\
             ["lint-staged", "npm:14.0.1"],\
             ["prettier", "npm:3.0.2"],\
@@ -183,6 +185,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@emotion/is-prop-valid", [\
+        ["npm:0.8.8", {\
+          "packageLocation": "./.yarn/cache/@emotion-is-prop-valid-npm-0.8.8-261a0f2426-bb7ec6d48c.zip/node_modules/@emotion/is-prop-valid/",\
+          "packageDependencies": [\
+            ["@emotion/is-prop-valid", "npm:0.8.8"],\
+            ["@emotion/memoize", "npm:0.7.4"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:1.2.1", {\
           "packageLocation": "./.yarn/cache/@emotion-is-prop-valid-npm-1.2.1-794afe6a94-8f42dc573a.zip/node_modules/@emotion/is-prop-valid/",\
           "packageDependencies": [\
@@ -193,6 +203,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@emotion/memoize", [\
+        ["npm:0.7.4", {\
+          "packageLocation": "./.yarn/cache/@emotion-memoize-npm-0.7.4-5648cf11b8-4e3920d4ec.zip/node_modules/@emotion/memoize/",\
+          "packageDependencies": [\
+            ["@emotion/memoize", "npm:0.7.4"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:0.8.1", {\
           "packageLocation": "./.yarn/cache/@emotion-memoize-npm-0.8.1-9b1e35ff15-a19cc01a29.zip/node_modules/@emotion/memoize/",\
           "packageDependencies": [\
@@ -1480,6 +1497,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@uidotdev/usehooks", [\
+        ["npm:2.2.0", {\
+          "packageLocation": "./.yarn/cache/@uidotdev-usehooks-npm-2.2.0-5be1f88b2e-cd5946d776.zip/node_modules/@uidotdev/usehooks/",\
+          "packageDependencies": [\
+            ["@uidotdev/usehooks", "npm:2.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:2.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/@uidotdev-usehooks-virtual-2a88a77f6b/0/cache/@uidotdev-usehooks-npm-2.2.0-5be1f88b2e-cd5946d776.zip/node_modules/@uidotdev/usehooks/",\
+          "packageDependencies": [\
+            ["@uidotdev/usehooks", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:2.2.0"],\
+            ["@types/react", "npm:18.2.21"],\
+            ["@types/react-dom", "npm:18.2.7"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@vitejs/plugin-react-swc", [\
         ["npm:3.3.2", {\
           "packageLocation": "./.yarn/cache/@vitejs-plugin-react-swc-npm-3.3.2-113c9f5a72-1e44b1b7c5.zip/node_modules/@vitejs/plugin-react-swc/",\
@@ -2051,12 +2094,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.2.7"],\
             ["@typescript-eslint/eslint-plugin", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:6.5.0"],\
             ["@typescript-eslint/parser", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:6.5.0"],\
+            ["@uidotdev/usehooks", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:2.2.0"],\
             ["@vitejs/plugin-react-swc", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:3.3.2"],\
             ["eslint", "npm:8.48.0"],\
             ["eslint-config-prettier", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:9.0.0"],\
             ["eslint-plugin-react-hooks", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:0.4.3"],\
             ["eslint-plugin-simple-import-sort", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:10.0.0"],\
+            ["framer-motion", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:10.16.1"],\
             ["husky", "npm:8.0.3"],\
             ["lint-staged", "npm:14.0.1"],\
             ["prettier", "npm:3.0.2"],\
@@ -2530,6 +2575,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["foreground-child", "npm:3.1.1"],\
             ["cross-spawn", "npm:7.0.3"],\
             ["signal-exit", "npm:4.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["framer-motion", [\
+        ["npm:10.16.1", {\
+          "packageLocation": "./.yarn/cache/framer-motion-npm-10.16.1-73639ed293-cce2497599.zip/node_modules/framer-motion/",\
+          "packageDependencies": [\
+            ["framer-motion", "npm:10.16.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:10.16.1", {\
+          "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-682c0d8d3b/0/cache/framer-motion-npm-10.16.1-73639ed293-cce2497599.zip/node_modules/framer-motion/",\
+          "packageDependencies": [\
+            ["framer-motion", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:10.16.1"],\
+            ["@emotion/is-prop-valid", "npm:0.8.8"],\
+            ["@types/react", "npm:18.2.21"],\
+            ["@types/react-dom", "npm:18.2.7"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:2d7851c92f13cfdd96b88474f1ad55e5afb90b82f1d6f82e9e145d52b345338714e543fc618ed2b03c9f027a114eb3a03b7ca8be86d525a4ffb8a86c51e0e332#npm:18.2.0"],\
+            ["tslib", "npm:2.6.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4301,6 +4374,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/typescript",\
             "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tslib", [\
+        ["npm:2.6.2", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.6.2-4fc8c068d9-329ea56123.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:2.6.2"]\
           ],\
           "linkType": "HARD"\
         }]\
