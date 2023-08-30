@@ -5,7 +5,7 @@ import React, { forwardRef, MouseEventHandler } from "react";
 import { FloorCard, FloorImage } from "./Floor.styles.tsx";
 import { FloorProps, TFloor } from "./Floor.types.ts";
 
-const Floor: React.FC<FloorProps> = forwardRef(
+const Floor: React.FC<FloorProps> = forwardRef<HTMLButtonElement, FloorProps>(
   ({ floor, totalFloors, onCallElevator }, ref) => {
     const activeFloor =
       floor == 1
@@ -15,8 +15,10 @@ const Floor: React.FC<FloorProps> = forwardRef(
         : TFloor.FLOOR;
 
     const handleClick: MouseEventHandler<HTMLButtonElement> = (ev) => {
+      const targetButton = ev.target as HTMLButtonElement;
       const offsetTop =
-        ev.target.offsetTop + ev.target.parentNode.parentNode.offsetTop;
+        targetButton.offsetTop +
+        (targetButton.parentNode?.parentNode as HTMLDivElement).offsetTop;
       onCallElevator({ floor, position: offsetTop });
     };
 

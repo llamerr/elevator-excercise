@@ -6,3 +6,9 @@ export type TPosition = {
 export type ElevatorProps = {
   position: TPosition;
 };
+
+export type ElevatorBoxProps = {
+  right: number;
+  top: number;
+  floor: number;
+};

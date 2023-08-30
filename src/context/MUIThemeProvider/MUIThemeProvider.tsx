@@ -4,6 +4,7 @@ import {
   ThemeOptions,
   ThemeProvider,
 } from "@mui/material";
+import React from "react";
 import { useDarkMode } from "usehooks-ts";
 
 const light: ThemeOptions = {
@@ -18,7 +19,9 @@ const dark: ThemeOptions = {
   },
 };
 
-const MUIThemeProvider = ({ children }) => {
+const MUIThemeProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   // The light theme is used by default
   const { isDarkMode, toggle, enable, disable } = useDarkMode();
 

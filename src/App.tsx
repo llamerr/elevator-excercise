@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Elevator from "@/components/Elevator/Elevator.tsx";
 import { TPosition } from "@/components/Elevator/Elevator.types.ts";
 import Floor from "@/components/Floor/Floor.tsx";
+import { FloorProps } from "@/components/Floor/Floor.types.ts";
 import DefaultLayout from "@/layouts/default.tsx";
 
 const MIN_FLOORS = 3;
@@ -23,14 +24,15 @@ function App() {
 
   useEffect(() => {
     if (lastFloorRef.current) {
+      const targetButton = lastFloorRef.current as HTMLButtonElement;
       const offsetTop =
-        lastFloorRef.current.offsetTop +
-        lastFloorRef.current.parentNode.parentNode.offsetTop;
+        targetButton.offsetTop +
+        (targetButton.parentNode?.parentNode as HTMLDivElement).offsetTop;
       setElevatorPosition({ floor: floors, position: offsetTop });
     }
   }, [lastFloorRef]);
 
-  const handleCall = ({ floor, position }) => {
+  const handleCall: FloorProps["onCallElevator"] = ({ floor, position }) => {
     setElevatorPosition({ floor, position });
   };
 

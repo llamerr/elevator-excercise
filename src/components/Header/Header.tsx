@@ -13,7 +13,7 @@ import * as React from "react";
 import { forwardRef } from "react";
 import { useDarkMode } from "usehooks-ts";
 
-const Header = forwardRef((props, ref) => {
+const Header = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const { isDarkMode, toggle, enable, disable } = useDarkMode();
 
   return (
