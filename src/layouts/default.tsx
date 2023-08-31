@@ -14,7 +14,15 @@ const DefaultLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Header ref={headerRef} />
-      <Box sx={{ marginTop: `${height}px` }}>{children}</Box>
+      <Box
+        sx={{
+          marginTop: `${height}px`,
+          display: "flex",
+          alignItems: "flex-end",
+        }}
+      >
+        {children}
+      </Box>
     </>
   );
 };

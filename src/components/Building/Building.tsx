@@ -93,7 +93,7 @@ const Building: React.FC<TBuildingProps> = ({
   );
 
   return (
-    <Box sx={{ position: "relative", width: "fit-content" }}>
+    <Box sx={{ position: "relative", width: "fit-content", padding: "0 20px" }}>
       {[...Array(elevators)].map((_, index) => (
         <Elevator
           key={index}
