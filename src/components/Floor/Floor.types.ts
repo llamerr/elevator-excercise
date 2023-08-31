@@ -12,10 +12,13 @@ export enum TFloorSizes {
 }
 export type FloorImageProps = {
   floor: TFloor;
+  elevators: number;
 };
 
 export type FloorProps = {
+  isCalled: boolean;
   floor: number;
   totalFloors: number;
+  elevatorsCount: number;
   onCallElevator: (position: TPosition) => void;
 };

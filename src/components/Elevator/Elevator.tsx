@@ -9,7 +9,12 @@ import { TFloorSizes } from "@/components/Floor/Floor.types.ts";
 
 const FLOOR_MOVEMENT_DURATION = 2;
 
-const Elevator: React.FC<ElevatorProps> = ({ position }) => {
+const Elevator: React.FC<ElevatorProps> = ({
+  number,
+  position,
+  queue,
+  setElevatorPosition,
+}) => {
   const [scope, animate] = useAnimate();
   const previousPosition = usePrevious(position.position);
   const previousFloor = usePrevious(position.floor);
@@ -18,7 +23,22 @@ const Elevator: React.FC<ElevatorProps> = ({ position }) => {
     const duration =
       Math.abs(position.floor - (previousFloor ?? position.floor)) *
       FLOOR_MOVEMENT_DURATION;
-    animate(scope.current, { top: position.position }, { duration: duration });
+    console.log(`Processing item: ${position.floor}`);
+    position.isProcessed = true;
+    animate(
+      scope.current,
+      { top: position.position },
+      {
+        duration: duration,
+        onComplete: () => {
+          console.log(`Done processing item: ${position.floor}`);
+          queue.dequeue(position);
+          position.isProcessed = false;
+          const newPosition = queue.processQueue();
+          if (newPosition) setElevatorPosition(newPosition);
+        },
+      },
+    );
   }, [position, previousFloor, scope, animate]);
 
   return (
@@ -30,7 +50,7 @@ const Elevator: React.FC<ElevatorProps> = ({ position }) => {
         ease: "linear",
         duration: FLOOR_MOVEMENT_DURATION,
       }}
-      right={80}
+      right={number * 100 + 100}
       top={previousPosition}
       floor={parseInt(TFloorSizes.FLOOR)}
       alt="Elevator"

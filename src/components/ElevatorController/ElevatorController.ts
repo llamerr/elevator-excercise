@@ -1,46 +1,30 @@
-export type TProcessCallback = (item: string) => Promise<void>;
+import without from "lodash/without";
+
+import { TPosition } from "@/components/Elevator/Elevator.types.ts";
+
 export class DynamicQueue {
-  queue: string[] = [];
-  concurrentLimit;
-  processCallback: TProcessCallback;
-  currentlyProcessing = 0;
+  queue: TPosition[] = [];
 
-  constructor(concurrentLimit: number = 2, processCallback: TProcessCallback) {
-    this.concurrentLimit = concurrentLimit;
-    this.processCallback = processCallback;
-  }
-
-  enqueue(item: string) {
+  enqueue(item: TPosition) {
+    //if this floor is already in queue, quit
+    if (this.queue.find((existing) => existing.floor === item.floor)) return;
+    //otherwise add to queue
     this.queue.push(item);
-    this.processQueue();
+    console.log(`Added to queue '${item.floor}'`);
+    console.log(`Queue is: ${this.queue.map((item) => item.floor).toString()}`);
   }
 
-  async processQueue() {
-    if (
-      this.currentlyProcessing >= this.concurrentLimit ||
-      this.queue.length === 0
-    ) {
-      return;
-    }
+  dequeue(item: TPosition) {
+    this.queue = without(this.queue, item);
+    console.log(`Removed from queue '${item.floor}'`);
+    console.log(`Queue is: ${this.queue.map((item) => item.floor).toString()}`);
+  }
 
-    const itemsToProcess = this.queue.splice(
-      0,
-      this.concurrentLimit - this.currentlyProcessing,
-    );
-    this.currentlyProcessing += itemsToProcess.length;
+  processQueue() {
+    return this.queue.find((item) => !item.isProcessed);
+  }
 
-    const processPromises = itemsToProcess.map(async (item) => {
-      try {
-        await this.processCallback(item);
-      } catch (error) {
-        console.error(`Error processing item ${item}: ${error}`);
-      } finally {
-        this.currentlyProcessing -= 1;
-        this.processQueue();
-      }
-    });
-
-    await Promise.all(processPromises);
-    this.processQueue();
+  processedNumber() {
+    return this.queue.filter((item) => item.isProcessed).length;
   }
 }

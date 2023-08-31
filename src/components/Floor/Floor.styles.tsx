@@ -29,17 +29,19 @@ export const FloorImage = styled(CardMedia)<CardMediaProps & FloorImageProps>(
   }),
 );
 
-export const FloorCard = styled(Card)<FloorImageProps>(({ floor }) => ({
-  display: "flex",
-  flexDirection: "column-reverse",
-  alignItems: "flex-start",
-  minWidth: 345,
-  position: "relative",
-  background: "transparent",
-  height:
-    floor === TFloor.BOTTOM_FLOOR
-      ? TFloorSizes.BOTTOM_FLOOR
-      : floor === TFloor.TOP_FLOOR
-      ? TFloorSizes.TOP_FLOOR
-      : TFloorSizes.FLOOR,
-}));
+export const FloorCard = styled(Card)<FloorImageProps>(
+  ({ floor, elevators }) => ({
+    display: "flex",
+    flexDirection: "column-reverse",
+    alignItems: "flex-start",
+    minWidth: 145 + elevators * 120,
+    position: "relative",
+    background: "transparent",
+    height:
+      floor === TFloor.BOTTOM_FLOOR
+        ? TFloorSizes.BOTTOM_FLOOR
+        : floor === TFloor.TOP_FLOOR
+        ? TFloorSizes.TOP_FLOOR
+        : TFloorSizes.FLOOR,
+  }),
+);
