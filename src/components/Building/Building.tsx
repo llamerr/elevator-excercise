@@ -17,6 +17,10 @@ const Building: React.FC<TBuildingProps> = ({
   const lastFloorRef = useRef();
   const queue = useRef(new DynamicQueue());
 
+  // TODO: useReducer for complex state? https://www.robinwieruch.de/react-usereducer-vs-usestate/
+  // useReducer gives us more predictable state transitions than useState. This becomes much more important when state changes
+  // are more complex and you want to have one place -- the reducer function -- to reason about them. A well designed reducer
+  // function encapsulates this logic perfectly.
   const [elevatorPosition, setElevatorPosition] = useState<TPosition[]>(
     Array(elevators).fill(
       {
