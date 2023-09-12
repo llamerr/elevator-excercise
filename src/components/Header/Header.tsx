@@ -4,7 +4,7 @@ import {
   Box,
   Container,
   FormControlLabel,
-  FormGroup,
+  FormGroup, Link,
   Switch,
   Toolbar,
   Typography,
@@ -39,6 +39,10 @@ const Header = forwardRef<HTMLDivElement, unknown>((_, ref) => {
           >
             LOGO
           </Typography>
+
+          <Box sx={{ flexGrow: 0, mx: 2 }}>
+            <Link href={`${window.location.href}/storybook`} target="_blank">DOCS</Link>
+          </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <FormGroup>
