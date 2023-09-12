@@ -69,7 +69,7 @@
     "src/**/*.{ts,tsx}": "eslint --fix",
     "src/**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "^yarn@3.6.3",
+  "packageManager": "yarn@3.6.3",
   "volta": {
     "node": "20.5.1",
     "yarn": "3.6.3"
