@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
       - name: Build
-        run: yarn build
+        run: yarn build && yarn build-storybook
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
