@@ -98,7 +98,7 @@ const Building: React.FC<BuildingProps> = ({
 
   return (
     <Box sx={{ position: "relative", width: "fit-content", padding: "0 20px" }}>
-      {[...Array(elevators) as number].map((_, index) => (
+      {[...(Array(elevators) as number[])].map((_, index) => (
         <Elevator
           key={index}
           number={index}
