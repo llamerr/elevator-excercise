@@ -54,7 +54,7 @@ const Building: React.FC<TBuildingProps> = ({
         ),
       );
     }
-  }, [lastFloorRef]);
+  }, [lastFloorRef, elevators, floors]);
 
   const handleCall: FloorProps["onCallElevator"] = (item) => {
     queue.current.enqueue(item);
@@ -98,7 +98,7 @@ const Building: React.FC<TBuildingProps> = ({
 
   return (
     <Box sx={{ position: "relative", width: "fit-content", padding: "0 20px" }}>
-      {[...Array(elevators)].map((_, index) => (
+      {[...Array(elevators) as number].map((_, index) => (
         <Elevator
           key={index}
           number={index}

@@ -25,7 +25,7 @@ const Elevator: React.FC<ElevatorProps> = ({
       FLOOR_MOVEMENT_DURATION;
     console.log(`Processing item: ${position.floor}`);
     position.isProcessed = true;
-    animate(
+    void animate(
       scope.current,
       { top: position.position },
       {
@@ -39,7 +39,7 @@ const Elevator: React.FC<ElevatorProps> = ({
         },
       },
     );
-  }, [position, previousFloor, scope, animate]);
+  }, [position, previousFloor, scope, animate, queue, setElevatorPosition]);
 
   return (
     <ElevatorBox

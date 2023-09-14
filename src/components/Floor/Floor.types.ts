@@ -8,17 +8,17 @@ export enum TFloor {
 export enum TFloorSizes {
   BOTTOM_FLOOR = "120px",
   TOP_FLOOR = "350px",
-  FLOOR = "120px",
+  FLOOR = BOTTOM_FLOOR,
 }
-export type FloorImageProps = {
+export interface FloorImageProps {
   floor: TFloor;
   elevators: number;
-};
+}
 
-export type FloorProps = {
+export interface FloorProps {
   isCalled: boolean;
   floor: number;
   totalFloors: number;
   elevatorsCount: number;
   onCallElevator: (position: TPosition) => void;
-};
+}

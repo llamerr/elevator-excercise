@@ -14,6 +14,8 @@ import React, { forwardRef, MouseEventHandler } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
+import Header from "@/components/Header/Header.tsx";
+
 import { FloorCard, FloorImage } from "./Floor.styles.tsx";
 import { FloorProps, TFloor } from "./Floor.types.ts";
 
@@ -120,5 +122,6 @@ const Floor: React.FC<FloorProps> = forwardRef<HTMLButtonElement, FloorProps>(
     );
   },
 );
+Floor.displayName = "Floor";
 
 export default Floor;

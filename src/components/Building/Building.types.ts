@@ -1,4 +1,4 @@
-export type TBuildingProps = {
+export interface TBuildingProps {
   floorsCount?: number;
   elevatorsCount?: number;
-};
+}

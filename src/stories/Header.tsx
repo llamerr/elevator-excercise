@@ -1,11 +1,10 @@
-import React from 'react';
+import "./header.css";
 
-import { Button } from './Button';
-import './header.css';
+import { Button } from "./Button";
 
-type User = {
+interface User {
   name: string;
-};
+}
 
 interface HeaderProps {
   user?: User;

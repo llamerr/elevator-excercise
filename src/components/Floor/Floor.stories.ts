@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Floor from './Floor';
 
 const meta: Meta<typeof Floor> = {
-  title: 'Example/Floor',
+  title: 'Code Blocks/Floor',
   component: Floor,
+  tags: ['autodocs'],
 };
 
 export default meta;

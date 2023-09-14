@@ -12,6 +12,11 @@ module.exports = {
     'plugin:storybook/recommended',
     'plugin:storybook/recommended'
   ],
+  'settings': {
+    'react': {
+      'version': 'detect',
+    },
+  },
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {

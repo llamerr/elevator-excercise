@@ -9,7 +9,6 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import * as React from "react";
 import { forwardRef } from "react";
 import { useDarkMode } from "usehooks-ts";
 
@@ -63,5 +62,6 @@ const Header = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     </AppBar>
   );
 });
+Header.displayName = "Header";
 
 export default Header;

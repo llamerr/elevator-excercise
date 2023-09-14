@@ -1,22 +1,20 @@
-import { Dispatch, SetStateAction } from "react";
-
 import { DynamicQueue } from "@/components/ElevatorController/ElevatorController.ts";
 
-export type TPosition = {
+export interface TPosition {
   floor: number;
   position: number;
   isProcessed: boolean;
-};
+}
 
-export type ElevatorProps = {
+export interface ElevatorProps {
   number: number;
   position: TPosition;
   queue: DynamicQueue;
   setElevatorPosition: (item: TPosition) => void;
-};
+}
 
-export type ElevatorBoxProps = {
+export interface ElevatorBoxProps {
   right: number;
   top: number;
   floor: number;
-};
+}

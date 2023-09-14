@@ -4,9 +4,9 @@ import { useElementSize } from "usehooks-ts";
 
 import Header from "@/components/Header/Header.tsx";
 
-type LayoutProps = {
+interface LayoutProps {
   children: React.ReactNode;
-};
+}
 
 const DefaultLayout: React.FC<LayoutProps> = ({ children }) => {
   const [headerRef, { width, height }] = useElementSize();
