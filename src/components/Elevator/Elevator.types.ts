@@ -7,9 +7,21 @@ export interface TPosition {
 }
 
 export interface ElevatorProps {
+  /**
+   * TODO
+   */
   number: number;
+  /**
+   * TODO
+   */
   position: TPosition;
+  /**
+   * TODO
+   */
   queue: DynamicQueue;
+  /**
+   * TODO
+   */
   setElevatorPosition: (item: TPosition) => void;
 }
 

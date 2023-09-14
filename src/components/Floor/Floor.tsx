@@ -2,10 +2,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import {
   Box,
-  Button,
   CardActions,
   CardContent,
-  Switch,
   ToggleButton,
   ToggleButtonGroup,
 } from "@mui/material";
@@ -13,8 +11,6 @@ import Typography from "@mui/material/Typography";
 import React, { forwardRef, MouseEventHandler } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-
-import Header from "@/components/Header/Header.tsx";
 
 import { FloorCard, FloorImage } from "./Floor.styles.tsx";
 import { FloorProps, TFloor } from "./Floor.types.ts";

@@ -1,14 +1,14 @@
 import { Box } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 
-import { TBuildingProps } from "@/components/Building/Building.types.ts";
+import { BuildingProps } from "@/components/Building/Building.types.ts";
 import Elevator from "@/components/Elevator/Elevator.tsx";
 import { TPosition } from "@/components/Elevator/Elevator.types.ts";
 import { DynamicQueue } from "@/components/ElevatorController/ElevatorController.ts";
 import Floor from "@/components/Floor/Floor.tsx";
 import { FloorProps } from "@/components/Floor/Floor.types.ts";
 
-const Building: React.FC<TBuildingProps> = ({
+const Building: React.FC<BuildingProps> = ({
   floorsCount = 7,
   elevatorsCount = 1,
 }) => {
